@@ -1,6 +1,6 @@
 <?php
 
-$texto = "PHP no está muerto… solo sigue trabajando silenciosamente en el 80% de Internet";
+$texto = "PHP es un gran lenguaje porque PHP es rapido y PHP es el lenguaje mas usado en el mundo PHP";
 
 $textoMinusculas = strtolower($texto);
 $totalPalabras = explode(" ", $textoMinusculas);
@@ -17,8 +17,12 @@ $cuantasVecesPalabra = array_count_values($palabrasFiltro);
 
 
 echo "<h2> Analizador de texto </h2>";
+echo "Frase en minúsculas: $textoMinusculas <br><br>";
+echo "La frase tiene un total de $conteoPalabra palabras. <br><br>";
+
 echo "Frase: $texto <br><br>";
 echo "Total de palabras $conteoPalabra <br><br>";
+
 echo "<h2> Palabras más repetidas </h2>";
 foreach ($cuantasVecesPalabra as $palabra => $veces) {
     if ($veces > 1) {
@@ -31,3 +35,4 @@ foreach ($cuantasVecesPalabra as $palabra => $veces) {
 arsort($cuantasVecesPalabra);
 $masRepetida = array_key_first($cuantasVecesPalabra);
 $vecesRepetida = $cuantasVecesPalabra[$masRepetida];
+echo "<br>La palabra más repetida es: <strong>$masRepetida</strong> con $vecesRepetida apariciones.";
