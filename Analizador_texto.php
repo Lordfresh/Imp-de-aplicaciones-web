@@ -21,7 +21,7 @@ echo "Frase en minúsculas: $textoMinusculas <br><br>";
 echo "La frase tiene un total de $conteoPalabra palabras. <br><br>";
 
 echo "Frase: $texto <br><br>";
-echo "Total de palabras $conteoPalabra <br><br>";
+
 
 echo "<h2> Palabras más repetidas </h2>";
 foreach ($cuantasVecesPalabra as $palabra => $veces) {
